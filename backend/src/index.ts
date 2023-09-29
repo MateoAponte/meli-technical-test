@@ -1,19 +1,13 @@
 import express from 'express';
-import searchRouter from './routes/search.ts';
+import searchRouter from './routes/items.ts';
 
 const app = express();
 app.use(express.json());
 
-const PORT = 3010;
-
 require('dotenv').config();
+const PORT = process.env.SERVER_PORT;
 
-app.get('/ping', (_req, res) => {
-  console.log('Some one pinged');
-  res.send('pong');
-});
-
-app.use('/api/search', searchRouter);
+app.use('/api/items', searchRouter);
 
 app.listen(PORT, () => {
   console.log('Server running');
