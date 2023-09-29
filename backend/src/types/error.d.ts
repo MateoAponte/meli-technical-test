@@ -5,6 +5,9 @@ export type CustomError = {
   message: string;
 };
 
+/**
+ * Diccionario de errores posibles dentro de la aplicación
+ */
 export type ErrorTypes = {
   NOT_FOUND: CustomError;
   UNAUTHORIZED: CustomError;

@@ -3,6 +3,9 @@ import { fetchItemsByQuery } from '../services/fetchItemsService.ts';
 import { fetchItemById } from '../services/fetchByIdService.ts';
 import { ErrorHandler, validateInput } from '../helpers/errorHandler.ts';
 
+/**
+ * Router que se usa para las rutas relacionadas a la búsqueda de Items
+ */
 const router = express.Router();
 
 router.get('/', async (req, res) => {

@@ -1,5 +1,8 @@
 import { ErrorTypes } from '../types/error';
 
+/**
+ * Diciconario definido de errores esperados en las respuestas de los servicios
+ */
 export const ERROR_DICTIONARY: ErrorTypes = {
   NOT_FOUND: {
     status: 404,

@@ -1,4 +1,4 @@
-import { Api } from '../Api';
+import { Api } from '../api';
 
 export class fetchItemsApi extends Api {
   constructor() {

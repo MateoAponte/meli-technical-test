@@ -1,15 +1,21 @@
 import fetch from 'node-fetch';
 import { ErrorHandler, validateResponse } from '../helpers/errorHandler';
 
+/**
+ * Clase que permite tener de forma centralizada una clase para realizar consultas
+ */
 export class Api {
   baseUrl: string;
   constructor(baseUrl: string) {
     this.baseUrl = baseUrl;
   }
 
+  /**
+   * Consulta de forma dinamica los endpoints configurados
+   * @param {string} endpoint
+   * @returns {Promise} Retorna una promesa resuelta
+   */
   async fetchEndpoint(endpoint: string) {
-    console.log(this.baseUrl + endpoint);
-
     return await fetch(this.baseUrl + endpoint)
       .then((res) => {
         validateResponse(res);
