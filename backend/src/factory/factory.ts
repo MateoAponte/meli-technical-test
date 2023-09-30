@@ -1,20 +1,16 @@
-import { fetchItemsApi } from './apiClasses/fetchItemsByQuery';
+import { ApisNames } from '../constants/apisNames';
 import { fetchItemApi } from './apiClasses/fetchItemById';
+import { fetchItemsApi } from './apiClasses/fetchItemsByQuery';
 
 /**
- * Clase para la construcción de Apis dependiendo al fin de cada una de estas
+ * Factory para crear los archivos Api's que conectan a un endpoint en especifico
  */
 export class ApiQueryFactory {
-  /**
-   * Permite crear una clase para realizar las peticiones
-   * @param {string} type Corresponde al tipo de Clase que se va a construir para realizar las peticiones
-   * @returns La clase correspondiendete
-   */
   createQuery(type: string) {
     switch (type) {
-      case 'itemById':
+      case ApisNames.ITEM_BY_ID:
         return new fetchItemApi();
-      case 'itemsByQuery':
+      case ApisNames.ITEMS_BY_QUERY:
         return new fetchItemsApi();
       default:
         throw new Error('Tipo de consulta no soportado');

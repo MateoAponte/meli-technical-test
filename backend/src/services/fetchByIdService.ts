@@ -1,5 +1,6 @@
 import { BuildDetailedData } from '../helpers/buildDetailedData';
 import { ApiQueryFactory } from '../factory/factory';
+import { ApisNames } from '../constants/apisNames';
 
 /**
  * Consulta el endpoint de Description By Item
@@ -7,8 +8,9 @@ import { ApiQueryFactory } from '../factory/factory';
  * @returns {Promise} Devuelve una promesa correspondiendo a la consulta de un endpoint
  */
 const fetchItemDescription = (param: string) => {
-  const itemById = new ApiQueryFactory().createQuery('itemById');
-  return itemById.fetchEndpoint(`/${param}/description`);
+  const query = new ApiQueryFactory().createQuery(ApisNames.ITEM_BY_ID);
+  const itemDescription = query.fetchEndpoint(`/${param}/description`);
+  return itemDescription;
 };
 
 /**
@@ -17,8 +19,9 @@ const fetchItemDescription = (param: string) => {
  * @returns {Promise} Devuelve una promesa correspondiendo a la consulta de un endpoint
  */
 const fetchItem = (param: string) => {
-  const itemById = new ApiQueryFactory().createQuery('itemById');
-  return itemById.fetchEndpoint(`/${param}`);
+  const query = new ApiQueryFactory().createQuery(ApisNames.ITEM_BY_ID);
+  const itemById = query.fetchEndpoint(`/${param}`);
+  return itemById;
 };
 
 /**
@@ -29,7 +32,7 @@ const fetchItem = (param: string) => {
 const fetchById = async (param: string) => {
   const description = await fetchItemDescription(param);
   const detailed = await fetchItem(param);
-  const res = await Promise.all([description.json(), detailed.json()]);
+  const res = await Promise.all([description, detailed]);
   const resMapped = { ...res[0], ...res[1] };
   return BuildDetailedData(resMapped);
 };

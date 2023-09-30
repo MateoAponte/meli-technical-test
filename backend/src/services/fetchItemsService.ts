@@ -1,5 +1,6 @@
-import { BuildItemsData } from '../helpers/buildItemsData';
+import { ApisNames } from '../constants/apisNames';
 import { ApiQueryFactory } from '../factory/factory';
+import { BuildItemsData } from '../helpers/buildItemsData';
 
 /**
  * Consulta el endpoint para obtener la totalidad de elementos que se relacionan a la búsqueda
@@ -7,10 +8,9 @@ import { ApiQueryFactory } from '../factory/factory';
  * @returns {Promise} Devuelve la data construida para el consumo del desarrollador
  */
 const fetchItems = async (query: string) => {
-  const itemQuery = new ApiQueryFactory().createQuery(`itemsByQuery`);
-  const res = await itemQuery.fetchEndpoint(`?q=:${query}`);
-
-  return BuildItemsData(await res.json());
+  const search = new ApiQueryFactory().createQuery(ApisNames.ITEMS_BY_QUERY);
+  const res = search.fetchEndpoint(`?q=:${query}`);
+  return BuildItemsData(await res);
 };
 
 export const fetchItemsByQuery = (query: string) => fetchItems(query);
