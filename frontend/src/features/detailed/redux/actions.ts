@@ -14,7 +14,7 @@ export const fetchItemDetailedThunk = createAsyncThunk(DETAILED_TYPES.FETCH_DETA
 });
 
 export const actions = {
-  [DETAILED_TYPES.UPDATE_ITEM]: (state: any, action: any) => {
-    state.item = action.payload;
+  [DETAILED_TYPES.UPDATE_SELECTED_THUMBNAIL]: (state: any, action: any) => {
+    state.selectedThumbnail = action.payload;
   },
 };

@@ -10,7 +10,7 @@ import { AppDispatch } from '../../../types/AppDispatch';
 export const ItemsList: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
 
-  const items = useSelector((state: any) => state[ITEMS_LISTS_NAME].items);
+  const items = useSelector((state: any) => state[ITEMS_LISTS_NAME].items || []);
   const categories = useSelector((state: any) => state[ITEMS_LISTS_NAME].categories);
 
   useMiddleware((payload: any) => {

@@ -11,13 +11,11 @@ export const detailedSlice = createSlice({
   },
   extraReducers(builder) {
     builder
-      .addCase(fetchItemDetailedThunk.pending, (state) => {
-        console.log('Pending');
-      })
+      .addCase(fetchItemDetailedThunk.pending, () => {})
       .addCase(fetchItemDetailedThunk.fulfilled, (state, { payload }) => {
-        console.log(payload);
         state.author = payload.author;
         state.detailed = payload.item;
+        state.category = payload.item.category;
       })
       .addCase(fetchItemDetailedThunk.rejected, (state, action) => {
         console.log(action);
@@ -25,5 +23,5 @@ export const detailedSlice = createSlice({
   },
 });
 
-export const { fetchDetailed } = detailedSlice.actions;
+export const { fetchDetailed, updateSelectedThumbnail } = detailedSlice.actions;
 export default detailedSlice.reducer;

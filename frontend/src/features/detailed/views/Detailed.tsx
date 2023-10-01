@@ -9,13 +9,14 @@ import { DETAILED_NAME } from '../redux/types';
 export const Detailed: React.FC = () => {
   const dispatch = useDispatch()<AppDispatch>;
   const detailed = useSelector((state: any) => state[DETAILED_NAME].detailed);
+  const category = useSelector((state: any) => [state[DETAILED_NAME].category]);
   useMiddleware((param: string) => {
     dispatch(fetchItemDetailedThunk(param));
   });
 
   return (
     <div className="detailed-container">
-      <BreadCrumb />
+      <BreadCrumb categories={category} />
       <ProductDetailed item={detailed} />
     </div>
   );
