@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { LinksHeader } from '../../constants/links';
 import { CiLocationOn } from 'react-icons/ci';
 import { LiaShoppingCartSolid } from 'react-icons/lia';
+import { NavBarSearcher } from './NavBarSearcher';
 
 export const NavBar: React.FC = () => {
   return (
@@ -10,7 +11,9 @@ export const NavBar: React.FC = () => {
         <div className="header__logo">
           <img src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.4.1/mercadolibre/logo__large_plus.png" alt="meli-logo" />
         </div>
-        <div className="header__searcher"></div>
+        <div className="header__searcher">
+          <NavBarSearcher />
+        </div>
         <div className="header__promo">
           <img src="https://http2.mlstatic.com/D_NQ_845788-MLA71637164141_092023-OO.webp" alt="meli-promo" />
         </div>
