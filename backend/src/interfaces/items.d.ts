@@ -1,4 +1,4 @@
-import { Author, Description, Price, SoldQuantity } from '../types/products';
+import { Author, Description, Picture, Price, SoldQuantity } from '../types/products';
 
 export interface ProductInfo {
   id: string;
@@ -11,6 +11,8 @@ export interface ProductInfo {
 export interface DescribedProductInfo extends ProductInfo {
   sold_quantity: number;
   description: string;
+  category: string;
+  picture: Picture;
 }
 /**
  * Corresponde a la firma establecida al consultar un Item por Id por medio de un Parametro "/:id"

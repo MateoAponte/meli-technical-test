@@ -2,6 +2,9 @@ import { ErrorHandler, validateInput } from '../helpers/errorHandler';
 import { fetchItemById } from '../services/fetchByIdService';
 import { fetchItemsByQuery } from '../services/fetchItemsService';
 
+/**
+ * Controlador que ejecuta los métodos que realizan las consultas a los Api's
+ */
 class ProductController {
   async getProductsByQuery(req: any, res: any) {
     try {

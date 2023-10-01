@@ -3,7 +3,7 @@ import { ErrorHandler, validateResponse } from '../helpers/errorHandler';
 import { ApiInterface } from '../interfaces/api';
 
 /**
- * Clase que permite tener de forma centralizada una clase para realizar consultas
+ * Clase que permite tener de forma centralizada las consultas a un endpoint determinado
  */
 export class Api implements ApiInterface {
   baseUrl: string;

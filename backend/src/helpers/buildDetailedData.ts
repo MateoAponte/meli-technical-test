@@ -1,6 +1,13 @@
 import { LocalAuthor } from '../constants/author';
 import { DetailedItem } from '../interfaces/items';
 
+const mapPictures = (data: any) => {
+  return data.map((item: any) => ({
+    url: item.url,
+    id: item.id,
+  }));
+};
+
 /**
  * Función que permite mapear la información de un item y agregar un Autor
  * @param {any} data Objeto que va a ser mapeada
@@ -17,11 +24,15 @@ export const BuildDetailedData = (data: any): DetailedItem => {
         amount: data.price,
         decimals: data.original_price,
       },
-      picture: data.thumbnail,
+      picture: {
+        image: data.thumbnail,
+        gallery: mapPictures(data.pictures),
+      },
       condition: data.condition,
       free_shipping: data.shipping.free_shipping,
       sold_quantity: data.sold_quantity,
       description: data.plain_text,
+      category: data.name,
     },
   };
 };

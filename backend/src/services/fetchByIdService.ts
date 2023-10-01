@@ -24,6 +24,12 @@ const fetchItem = (param: string) => {
   return itemById;
 };
 
+const fetchCategory = (param: string) => {
+  const query = new ApiQueryFactory().createQuery(ApisNames.CATEGORIES_BY_ID);
+  const categoryById = query.fetchEndpoint(`/${param}`);
+  return categoryById;
+};
+
 /**
  * Ejecuta todos los endpoints necesarios para obtener la información del detallado de un item
  * @param {string} param Corresponde al parametro del Id del item
@@ -32,8 +38,9 @@ const fetchItem = (param: string) => {
 const fetchById = async (param: string) => {
   const description = await fetchItemDescription(param);
   const detailed = await fetchItem(param);
-  const res = await Promise.all([description, detailed]);
-  const resMapped = { ...res[0], ...res[1] };
+  const category = await fetchCategory(detailed.category_id);
+  const res = await Promise.all([description, detailed, category]);
+  const resMapped = { ...res[0], ...res[1], ...res[2] };
   return BuildDetailedData(resMapped);
 };
 
