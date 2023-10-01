@@ -1,13 +1,14 @@
 import { useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 
 export const useMiddleware = (callback: Function) => {
   const [searchParams] = useSearchParams();
+  const { id } = useParams();
   const params = searchParams.get('q');
 
   useEffect(() => {
-    if (searchParams.get('q')) {
-      const value = callback(params);
+    if (searchParams.get('q') || !!id) {
+      const value = callback(params || id);
       return value;
     }
     return null;

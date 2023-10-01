@@ -1,13 +1,11 @@
 import { ProductsColumn } from '../components/ProductsColumn';
 import { SummaryColumn } from '../components/SummaryColumn';
-import { useMiddleware } from '../hooks/useMiddleware';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAsyncThunk } from '../redux/actions';
-import { store } from '../../../store';
 import { ITEMS_LISTS_NAME } from '../redux/types';
 import { useSearchParams } from 'react-router-dom';
-
-type AppDispatch = typeof store.dispatch;
+import { useMiddleware } from '../../../common/hooks/useMiddleware';
+import { AppDispatch } from '../../../types/AppDispatch';
 
 export const ItemsList: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();

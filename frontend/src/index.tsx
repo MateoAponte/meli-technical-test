@@ -7,6 +7,7 @@ import { NavBar } from './common/components/NavBar';
 import { ItemsList } from './features/items/view/ItemsList';
 import { Provider } from 'react-redux';
 import { store } from './store';
+import { Detailed } from './features/detailed/views/Detailed';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
@@ -17,6 +18,7 @@ root.render(
         <main className="test-container">
           <Routes>
             <Route path="/list" element={<ItemsList />} />
+            <Route path="/item/:id" element={<Detailed />} />
           </Routes>
         </main>
       </BrowserRouter>

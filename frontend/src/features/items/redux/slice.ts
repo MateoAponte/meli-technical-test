@@ -1,8 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { actions } from './actions';
+import { actions, fetchAsyncThunk } from './actions';
 import { initialState } from './state';
 import { ITEMS_LISTS_NAME } from './types';
-import { fetchAsyncThunk } from './actions';
 
 export const itemsListSlice = createSlice({
   name: ITEMS_LISTS_NAME,
@@ -26,5 +25,5 @@ export const itemsListSlice = createSlice({
   },
 });
 
-export const { fetchItemList } = itemsListSlice.actions;
+export const { fetchItemList, updateItems, updateCategories, updateAuthor } = itemsListSlice.actions;
 export default itemsListSlice.reducer;
