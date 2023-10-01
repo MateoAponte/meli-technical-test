@@ -2,18 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './assets/styles/main.scss';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { NavBar } from './common/components/NavBar';
+import { ItemsList } from './features/items/view/ItemsList';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <NavBar></NavBar>
-      <main className="test-container">
-        <Routes></Routes>
-      </main>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <NavBar></NavBar>
+        <main className="test-container">
+          <Routes>
+            <Route path="/list" element={<ItemsList />} />
+          </Routes>
+        </main>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
 );
 
