@@ -28,5 +28,6 @@ export interface DetailedItem {
 export interface Items {
   author: Author;
   categories: Array<string>;
+  total: number;
   items: Array<ProductInfo>;
 }

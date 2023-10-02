@@ -22,6 +22,7 @@ export const BuildItemsData = (data: any): Items => {
     };
   });
   return {
+    total: data.paging.total,
     author: LocalAuthor,
     items: mappedData,
     categories: data.results[0].tags as Array<string>,
