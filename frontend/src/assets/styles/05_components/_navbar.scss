@@ -30,7 +30,11 @@
     width: 162px;
     margin-right: 24px;
   }
+  .header__logo {
+    cursor: pointer;
+  }
   .header__location {
+    cursor: pointer;
     display: flex;
     align-items: flex-start;
     &-icon {
@@ -59,8 +63,13 @@
     font-size: 14px;
     color: rgba($color-dark-black, 0.6);
     text-decoration: none;
+    transition: all 0.5s;
     &:not(:last-child) {
       margin-right: 16px;
+    }
+
+    &:hover {
+      color: rgba($color-dark-black, 0.9);
     }
   }
   .header__searcher {
@@ -84,5 +93,6 @@
   }
   .header__promo img {
     height: 39px;
+    cursor: pointer;
   }
 }

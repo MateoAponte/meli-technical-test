@@ -37,7 +37,7 @@ export const ProductDetailed: React.FC<any> = ({ item = {} }) => {
         <section className="detailed-image">
           <div className="detailed-image__gallery">
             {item.picture?.gallery.map((thumbnail: any) => (
-              <GalleryItem thumbnail={thumbnail} setSelection={setSelection} />
+              <GalleryItem key={thumbnail.id} thumbnail={thumbnail} setSelection={setSelection} />
             ))}
           </div>
           <div className="detailed-image__picture">

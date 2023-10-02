@@ -1,8 +1,10 @@
 import itemsApi from '../../../api/itemsApi';
+import { updateLoading } from '../../../store/slice';
 import { ITEMS_LISTS_TYPES } from './types';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-export const fetchAsyncThunk = createAsyncThunk(ITEMS_LISTS_TYPES.FETCH_ITEMS_LIST, async (query: string) => {
+export const fetchAsyncThunk = createAsyncThunk(ITEMS_LISTS_TYPES.FETCH_ITEMS_LIST, async (query: string, { dispatch }) => {
+  dispatch(updateLoading(true as any));
   return await itemsApi
     .fetchItemsByQuery(query)
     .then(({ data }) => {
@@ -10,6 +12,9 @@ export const fetchAsyncThunk = createAsyncThunk(ITEMS_LISTS_TYPES.FETCH_ITEMS_LI
     })
     .catch((err) => {
       throw new Error(err);
+    })
+    .finally(() => {
+      dispatch(updateLoading(false as any));
     });
 });
 

@@ -8,6 +8,7 @@ import { ItemsList } from './features/items/view/ItemsList';
 import { Provider } from 'react-redux';
 import { store } from './store';
 import { Detailed } from './features/detailed/views/Detailed';
+import { Loader } from './common/components/Loader';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
@@ -16,6 +17,7 @@ root.render(
       <BrowserRouter>
         <NavBar></NavBar>
         <main className="test-container">
+          <Loader />
           <Routes>
             <Route path="/list" element={<ItemsList />} />
             <Route path="/item/:id" element={<Detailed />} />

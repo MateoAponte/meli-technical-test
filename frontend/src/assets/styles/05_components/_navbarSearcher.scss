@@ -12,8 +12,11 @@
     padding: 10px 60px 10px 15px;
 
     &:active,
-    &:focus {
-      border: 1px solid $color-medium-blue;
+    &:focus,
+    &:focus-visible {
+      border: 2px solid $color-lighter-blue;
+      border-radius: 4px;
+      outline: none;
     }
 
     &::placeholder {

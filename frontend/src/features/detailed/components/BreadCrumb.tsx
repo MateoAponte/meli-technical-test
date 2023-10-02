@@ -12,7 +12,7 @@ export const BreadCrumb: React.FC<any> = ({ categories = [] }) => {
         </Link>
         <span className="breadcrumb__divider">|</span>
         {categories.map((item: string, index: number) => (
-          <Link className="breadcrumb__link" to={'/'}>
+          <Link key={index} className="breadcrumb__link" to={'/'}>
             {validateLastItem(categories, index) ? <span> {item} </span> : <span>{item} &gt;</span>}
           </Link>
         ))}

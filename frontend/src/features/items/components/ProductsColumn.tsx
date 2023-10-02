@@ -9,7 +9,6 @@ export const ProductsColumn: React.FC<any> = ({ items }) => {
           <ProductItem item={item} key={item.id} />
         ))}
       </div>
-      <div className="products__pagination">Pag</div>
     </>
   );
 };
