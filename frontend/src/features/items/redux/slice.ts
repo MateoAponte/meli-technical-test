@@ -18,8 +18,14 @@ export const itemsListSlice = createSlice({
         state.total = payload.total;
         state.items = payload.items;
       })
-      .addCase(fetchAsyncThunk.rejected, (state, action) => {
-        console.log(action);
+      .addCase(fetchAsyncThunk.rejected, (state) => {
+        state.author = {
+          name: '',
+          lastname: '',
+        };
+        state.categories = [];
+        state.total = 0;
+        state.items = [];
       });
   },
 });

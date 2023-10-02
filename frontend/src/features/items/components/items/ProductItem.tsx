@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { parsedCurrency } from '../../../common/utils/parsedCurrency';
+import { parsedCurrency } from '../../../../common/utils/parsedCurrency';
 
 const isFreeShipping = (freeShipping: boolean) => {
   return freeShipping && <span className="product-card__shipping"> Envío Gratis </span>;
