@@ -31,7 +31,7 @@ El proyecto se puede clonar desde _[https://github.com/MateoAponte/meli-technica
 
 - Instalar dependencias con `npm i` y esperar que se ejecute el server.
 
-- Correr el servidor con el comando `npm run start`, cuando la consola lance el mensaje `Server running` significa que el servidor esta listo para poder usarse.
+- Correr el servidor con el comando `npm run dev`, cuando la consola lance el mensaje `Server running` significa que el servidor esta listo para poder usarse.
 
 ### Correr la Aplicación Web
 
