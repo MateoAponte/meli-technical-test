@@ -9,20 +9,28 @@ import { Provider } from 'react-redux';
 import { store } from './store';
 import { Detailed } from './features/detailed/views/Detailed';
 import { Loader } from './common/components/Loader';
+import { Helmet } from 'react-helmet';
+import { Meta } from './common/components/Meta';
+import { Main } from './common/components/Main';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+const TITLE = 'Mercado Libre - Prueba técnica';
+
 root.render(
   <React.StrictMode>
+    <Helmet>
+      <Meta title={TITLE} />
+    </Helmet>
     <Provider store={store}>
       <BrowserRouter>
         <NavBar></NavBar>
-        <main className="test-container">
+        <Main>
           <Loader />
           <Routes>
             <Route path="/list" element={<ItemsList />} />
             <Route path="/item/:id" element={<Detailed />} />
           </Routes>
-        </main>
+        </Main>
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,

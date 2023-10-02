@@ -82,7 +82,7 @@
       &__title {
         color: $color-dark-black;
         font-size: 20px;
-        font-weight: 600;
+        font-weight: 100;
         overflow: hidden;
         text-overflow: ellipsis;
         word-break: break-word;
@@ -101,7 +101,7 @@
         color: $color-dark-black;
         display: flex;
         font-size: 24px;
-        font-weight: 400;
+        font-weight: 500;
         line-height: 1.25;
         margin-right: 8px;
       }
@@ -120,11 +120,13 @@
       }
       &__shipping {
         flex-shrink: 0;
-        font-size: 14px;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 1;
         margin-right: 10px;
         margin-bottom: 12px;
+        color: $color-medium-green;
+        font-size: 14px;
+        display: inline;
       }
       &__description {
         line-height: 18px;

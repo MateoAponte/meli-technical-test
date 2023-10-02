@@ -1,6 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import { parsedCurrency } from '../../../common/utils/parsedCurrency';
 
+const isFreeShipping = (freeShipping: boolean) => {
+  return freeShipping && <span className="product-card__shipping"> Envío Gratis </span>;
+};
+
 export const ProductItem: React.FC<any> = ({ item }) => {
   const navigate = useNavigate();
 
@@ -22,7 +26,7 @@ export const ProductItem: React.FC<any> = ({ item }) => {
             <h5 className="product-card__price"> {parsedCurrency(item.price.amount)} </h5>
             <span className="product-card__amounts"> {item.price.currency} </span>
           </div>
-          <span className="product-card__shipping"> {item.free_shipping.free_shipping} </span>
+          {isFreeShipping(item.free_shipping?.free_shipping)}
           <span className="product-card__description"> {item.title} </span>
         </div>
         <div className="product-card__mark"></div>

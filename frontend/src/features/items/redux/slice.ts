@@ -11,9 +11,7 @@ export const itemsListSlice = createSlice({
   },
   extraReducers(builder) {
     builder
-      .addCase(fetchAsyncThunk.pending, (state) => {
-        console.log('Pending');
-      })
+      .addCase(fetchAsyncThunk.pending, () => {})
       .addCase(fetchAsyncThunk.fulfilled, (state, { payload }) => {
         state.author = payload.author;
         state.categories = payload.categories;
