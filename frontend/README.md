@@ -1,79 +1,47 @@
-# meli-technical-test
+# Getting Started with Create React App
 
-<div  align="center">
-  <img src="https://media.giphy.com/media/TLnWsIBRegQyWxG4Dw/giphy.gif" height="250" width="250" />
-</div>
-<h3 align="center">Bienvenido 👋, A mi prueba técnica</h3>
-<div align="center">
-  <a href="https://www.linkedin.com/mwlite/in/mateo-aponte-murcia">
-    <img src="https://img.shields.io/badge/MateoAponte-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white">
-  </a>
-  <a href="https://www.hackerrank.com/apontemurciamat1">
-    <img src="https://img.shields.io/badge/-apontemurciamat1-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white">
-  </a>
-  <br/>
-  <br/>
-</div>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<hr />
+## Available Scripts
 
+In the project directory, you can run:
 
-## ¿Cómo correr el proyecto?
+### `npm start`
 
-### Clonar el repo
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-El proyecto se puede clonar desde _[https://github.com/MateoAponte/meli-technical-test.git](https://github.com/MateoAponte/meli-technical-test.git 'Repositorio')_ y el Branch a clonar es **main**
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-<span style="color: red; font-weight: 500">Importante!</span> El proyecto consta de dos carpetas. El servidor ubicado en **backend/** y la aplicación Web SPA ubicada e **frontend/**
+### `npm test`
 
-### Correr el servidor
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- Ejecutar el comando `cd backend` desde la raíz del proyecto.
+### `npm run build`
 
-- Instalar dependencias con `npm i` y esperar que se ejecute el server.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- Correr el servidor con el comando `npm run start`, cuando la consola lance el mensaje `Server running` significa que el servidor esta listo para poder usarse.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Correr la Aplicación Web
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- Ejecutar el comando `cd frontend` desde la raíz del proyecto.
+### `npm run eject`
 
-- Instalar dependencias con `npm i` y esperar que se ejecute el server.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-- Correr la aplicación con el comando `npm run start`, una vez se abra una pestaña con la url `localhost:3000` esta listo para el uso del usuario.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Requisitos del sistema
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-* Las instrucciones dadas son para correr el proyecto dentro de **Windows**
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-* Este proyecto se creo con la versión de node ``16.20.2`` se aconseja tener una versión ``> 14 && < 18``
+## Learn More
 
-## Uso
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-* Una vez esten instaladas las dependencias y ejecutados los comandos para subir tanto el **Servidor** como la **Aplicación web** se debe seguir el flujo aconsejado por el documento de la prueba técnica.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-* Vista principal **->** Interactuar con el búscador **->** Obtener resultados de la búsqueda **->** Seleccionar un producto para ir a la vista detallada del elemento
-
-## Acerca del proyecto
-
-* El **Servidor** tienen una documentación dentro de la carpeta `backend/docs` donde se puede obtener la información de todas las clases, funciones y demás.
-
-
-## Contacto
-* Número: 3214710106
-* Correo: mateo2aponte@hotmail.com
-* La red social por la cuál me pueden contactar es:
-
-<div align="center">
-  <a href="https://www.linkedin.com/mwlite/in/mateo-aponte-murcia">
-    <img src="https://img.shields.io/badge/MateoAponte-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white">
-  </a>
-</div>
-
-##
-
-<div align="center">
-  <a href="#">
-    <img src="https://img.shields.io/badge/FRONT AS A SCIENCE-red?logo=undertale&style=for-the-badge">
-  </a>
-</div>
