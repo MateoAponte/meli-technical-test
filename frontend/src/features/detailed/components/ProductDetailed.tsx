@@ -9,6 +9,12 @@ import { DETAILED_NAME } from '../redux/types';
 const isNew = (condition: string) => {
   return condition === 'new';
 };
+const setThumbnail = () => {
+  const inputs = document.querySelectorAll("[name='thumbnail-cover']") as any;
+  if (inputs.length > 0) {
+    inputs[0].checked = true;
+  }
+};
 
 export const ProductDetailed: React.FC<any> = ({ item = {} }) => {
   const dispatch = useDispatch()<AppDispatch>;
@@ -19,12 +25,6 @@ export const ProductDetailed: React.FC<any> = ({ item = {} }) => {
   };
   const setSelection = (url: string) => {
     dispatch(updateSelectedThumbnail(url as any));
-  };
-  const setThumbnail = () => {
-    const inputs = document.querySelectorAll("[name='thumbnail-cover']") as any;
-    if (inputs.length > 0) {
-      inputs[0].checked = true;
-    }
   };
   useEffect(() => {
     setSelection(item.picture?.gallery[0].url);

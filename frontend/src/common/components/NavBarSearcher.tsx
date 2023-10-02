@@ -9,14 +9,12 @@ export const NavBarSearcher: React.FC = () => {
   const onInput = (evt: any) => {
     setSearch(evt.target.value);
   };
-
   const doSearch = (evt: any) => {
     if (evt.keyCode === 13 && !!search) {
       evt.preventDefault();
       getSearchByQuery();
     }
   };
-
   const getSearchByQuery = () => {
     navigate(`/list?q=${search}`);
   };
