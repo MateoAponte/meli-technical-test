@@ -3,7 +3,7 @@
 <div  align="center">
   <img src="https://media.giphy.com/media/TLnWsIBRegQyWxG4Dw/giphy.gif" height="250" width="250" />
 </div>
-<h3 align="center">Bienvenido 👋, A mi prueba técnica</h3>
+<h3 align="center">Bienvenid@ 👋, A mi prueba técnica</h3>
 <div align="center">
   <a href="https://www.linkedin.com/mwlite/in/mateo-aponte-murcia">
     <img src="https://img.shields.io/badge/MateoAponte-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white">
