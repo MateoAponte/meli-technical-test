@@ -2,10 +2,10 @@ import { configureStore } from '@reduxjs/toolkit';
 
 import itemsListReducer from '../features/items/redux/slice';
 import detailedReducer from '../features/detailed/redux/slice';
-import commonReducer from './slice';
+import commonReducer from './common/slice';
 import { ITEMS_LISTS_NAME } from '../features/items/redux/types';
 import { DETAILED_NAME } from '../features/detailed/redux/types';
-import { COMMON_STORE_NAME } from './types';
+import { COMMON_STORE_NAME } from './common/types';
 
 export const store = configureStore({
   reducer: {

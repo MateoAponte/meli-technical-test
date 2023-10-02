@@ -24,7 +24,7 @@ export const NavBarSearcher: React.FC = () => {
   return (
     <form className="navbar__searcher" id="navbar__searcher" onKeyDown={doSearch}>
       <input className="navbar__searcher-input" placeholder="Buscar productos, marcas y más..." value={search} onInput={onInput} />
-      <button className="navbar__searcher-icon">
+      <button className="navbar__searcher-icon" name="searcher-button">
         <div className="navbar__searcher-divider"></div>
         <AiOutlineSearch />
       </button>

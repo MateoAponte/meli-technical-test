@@ -17,6 +17,7 @@ export const itemsListSlice = createSlice({
       .addCase(fetchAsyncThunk.fulfilled, (state, { payload }) => {
         state.author = payload.author;
         state.categories = payload.categories;
+        state.total = payload.total;
         state.items = payload.items;
       })
       .addCase(fetchAsyncThunk.rejected, (state, action) => {

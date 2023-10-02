@@ -80,11 +80,8 @@
         width: calc(100% - 208px);
       }
       &__title {
-        line-clamp: 1;
-        box-orient: vertical;
         color: $color-dark-black;
-        display: box;
-        font-size: 14px;
+        font-size: 20px;
         font-weight: 600;
         overflow: hidden;
         text-overflow: ellipsis;

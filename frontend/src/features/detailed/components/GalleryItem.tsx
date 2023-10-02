@@ -1,4 +1,4 @@
-export const GalleryItem: React.FC<any> = ({ thumbnail, setSelection, selection }) => {
+export const GalleryItem: React.FC<any> = ({ thumbnail, setSelection }) => {
   return (
     <div className="detailed-image__gallery-button">
       <input
@@ -11,7 +11,7 @@ export const GalleryItem: React.FC<any> = ({ thumbnail, setSelection, selection 
       />
       <label className="detailed-image__gallery-item" htmlFor={thumbnail.id}>
         <div className="detailed-image__gallery-image">
-          <img src={thumbnail.url} alt={thumbnail.id} />
+          <img src={thumbnail.url} alt="imageAboutProductSearch" />
         </div>
       </label>
     </div>

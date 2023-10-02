@@ -18,13 +18,16 @@ export const NavBar: React.FC = () => {
     <header className="header-container">
       <section className="header-row">
         <div className="header__logo" onClick={() => navigateTo(`/`)}>
-          <img src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.4.1/mercadolibre/logo__large_plus.png" alt="meli-logo" />
+          <img
+            src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.4.1/mercadolibre/logo__large_plus.png"
+            alt="mercadoLibreLogo"
+          />
         </div>
         <div className="header__searcher">
           <NavBarSearcher />
         </div>
         <div className="header__promo" onClick={() => navigateTo(`${promoLink}`)}>
-          <img src="https://http2.mlstatic.com/D_NQ_845788-MLA71637164141_092023-OO.webp" alt="meli-promo" />
+          <img src="https://http2.mlstatic.com/D_NQ_845788-MLA71637164141_092023-OO.webp" alt="disneyPlusAndStartPromoción" />
         </div>
       </section>
       <section className="header-row">

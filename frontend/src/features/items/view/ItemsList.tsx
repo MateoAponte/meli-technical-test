@@ -6,11 +6,13 @@ import { ITEMS_LISTS_NAME } from '../redux/types';
 import { useSearchParams } from 'react-router-dom';
 import { useMiddleware } from '../../../common/hooks/useMiddleware';
 import { AppDispatch } from '../../../types/AppDispatch';
+import { parsedNumber } from '../../../common/utils/parsedCurrency';
 
 export const ItemsList: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
 
   const items = useSelector((state: any) => state[ITEMS_LISTS_NAME].items || []);
+  const total = useSelector((state: any) => state[ITEMS_LISTS_NAME].total || []);
   const categories = useSelector((state: any) => state[ITEMS_LISTS_NAME].categories);
 
   useMiddleware((payload: any) => {
@@ -23,7 +25,7 @@ export const ItemsList: React.FC = () => {
     <>
       <div className="list-items__container">
         <aside className="list-items__summary">
-          <SummaryColumn search={query} total={items.length} categories={categories} />
+          <SummaryColumn search={query} total={parsedNumber(total)} categories={categories} />
         </aside>
         <section className="list-items__products">
           <ProductsColumn items={items} />

@@ -1,5 +1,5 @@
 import itemsApi from '../../../api/itemsApi';
-import { updateLoading } from '../../../store/slice';
+import { updateLoading } from '../../../store/common/slice';
 import { ITEMS_LISTS_TYPES } from './types';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
@@ -27,5 +27,8 @@ export const actions = {
   },
   [ITEMS_LISTS_TYPES.UPDATE_CATEGORIES]: (state: any, action: any) => {
     state.categories = action.payload;
+  },
+  [ITEMS_LISTS_TYPES.UPDATE_TOTAL]: (state: any, action: any) => {
+    state.total = action.payload;
   },
 };

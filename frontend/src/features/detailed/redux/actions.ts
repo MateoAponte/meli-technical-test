@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { DETAILED_TYPES } from './types';
 import itemsApi from '../../../api/itemsApi';
-import { updateLoading } from '../../../store/slice';
+import { updateLoading } from '../../../store/common/slice';
 
 export const fetchItemDetailedThunk = createAsyncThunk(DETAILED_TYPES.FETCH_DETAILED, async (param: string, { dispatch }) => {
   dispatch(updateLoading(true as any));

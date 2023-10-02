@@ -1,6 +1,6 @@
 import { FaReact } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
-import { COMMON_STORE_NAME } from '../../store/types';
+import { COMMON_STORE_NAME } from '../../store/common/types';
 
 export const Loader: React.FC = () => {
   const loading = useSelector((state: any) => {

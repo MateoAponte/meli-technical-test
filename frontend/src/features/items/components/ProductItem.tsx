@@ -19,7 +19,7 @@ export const ProductItem: React.FC<any> = ({ item }) => {
             {item.title}
           </h3>
           <div className="product-card__cost">
-            <span className="product-card__price"> {parsedCurrency(item.price.amount)} </span>
+            <h5 className="product-card__price"> {parsedCurrency(item.price.amount)} </h5>
             <span className="product-card__amounts"> {item.price.currency} </span>
           </div>
           <span className="product-card__shipping"> {item.free_shipping.free_shipping} </span>

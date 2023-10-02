@@ -5,4 +5,5 @@ export const ITEMS_LISTS_TYPES = {
   UPDATE_ITEMS_LIST: 'updateItemsList',
   UPDATE_CATEGORIES: 'updateCategories',
   UPDATE_AUTHOR: 'updateAuthor',
+  UPDATE_TOTAL: 'updateTotal',
 };

@@ -55,7 +55,9 @@ export const ProductDetailed: React.FC<any> = ({ item = {} }) => {
             </div>
           </div>
           <div className="detailed__actions">
-            <button className="detailed__shop">Comprar ahora</button>
+            <button className="detailed__shop" name="shop-product">
+              Comprar ahora
+            </button>
           </div>
         </section>
       </section>
