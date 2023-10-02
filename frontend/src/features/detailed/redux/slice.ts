@@ -23,5 +23,5 @@ export const detailedSlice = createSlice({
   },
 });
 
-export const { fetchDetailed, updateSelectedThumbnail } = detailedSlice.actions;
+export const { fetchDetailed, updateSelectedThumbnail, updateCategory, updateAuthor, updateDetailed } = detailedSlice.actions;
 export default detailedSlice.reducer;
