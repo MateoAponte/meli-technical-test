@@ -3,7 +3,6 @@
 # dependencies
 node_modules
 build
-public
 build
 /.pnp
 .pnp.js
