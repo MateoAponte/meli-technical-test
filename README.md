@@ -39,7 +39,7 @@ El proyecto se puede clonar desde _[https://github.com/MateoAponte/meli-technica
 
 - Instalar dependencias con `npm i` y esperar que se ejecute el server.
 
-- Correr la aplicación con el comando `npm run start`, una vez se abra una pestaña con la url `localhost:3000` esta listo para el uso del usuario.
+- Correr la aplicación con el comando `npm run start`, una vez se abra una pestaña con la url [http://localhost:3000](http://localhost:3000) esta listo para el uso del usuario.
 
 ## Requisitos del sistema
 
