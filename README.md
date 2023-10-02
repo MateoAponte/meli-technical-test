@@ -55,7 +55,21 @@ El proyecto se puede clonar desde _[https://github.com/MateoAponte/meli-technica
 
 ## Acerca del proyecto
 
-- El **Servidor** tienen una documentación dentro de la carpeta `backend/docs` donde se puede obtener la información de todas las clases, funciones y demás.
+- **Lenguaje:** Todo el proyecto se realizo con TypeScript, evitando usar demasiados interfaces en la SPA para no aumentar el grado de complejidad de forma innecesaria.
+
+- **Organización del proyecto:** Se organizo teniendo en cuenta el patrón ``FBS (Feature Based Structure)`` para facilitar la escalabilidad.
+
+- **Documentación de Servidor:** tienen una documentación dentro de la carpeta `backend/docs` donde se puede obtener la información de todas las clases, funciones y demás.
+
+- **Estilos:** Se siguieron el patrón de carpetas **7-1** y la metodología de clases **BEM**, usando SASS para facilitar la implementación de estos.
+
+- A nivel de la SPA, se usaron componentes funcionales para facilitar el uso del patrón Component Composition.
+
+- **Complementos de React:** Se implemento ``react-router-rom@6.16.0`` y ``@reduxjs/toolkit@1.9.6`` para facilitar la escalabilidad.
+
+- **SEO:** A nivel de SEO se implemento ``react-Helment@6.1.0``.
+
+- **Librerías para utilidades:** Se implemento ``numeral@2.0.3``, ``axios@1.51`` y ``raect-icons@4.11.0``.
 
 ## Contacto
 
